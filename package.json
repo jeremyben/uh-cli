@@ -1,0 +1,49 @@
+{
+	"name": "uh-cli",
+	"version": "1.0.0",
+	"author": "Jeremy Bensimon <bensimon.jeremy@gmail.com>",
+	"repository": "github:jeremyben/uh-cli",
+	"license": "MIT",
+	"description": "Interactive CLI Prompt for your npm scripts",
+	"keywords": [
+		"script",
+		"run",
+		"prompt",
+		"cli"
+	],
+	"main": "dist/main.js",
+	"types": "dist/main.d.ts",
+	"files": [
+		"dist"
+	],
+	"bin": {
+		"uh": "dist/main.js"
+	},
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"scripts": {
+		"start": "cd fixtures && ts-node ../src/main.ts",
+		"build": "rimraf dist && tsc",
+		"prepublishOnly": "yarn run build",
+		"test": "jest"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node"
+	},
+	"dependencies": {
+		"inquirer": "^6.0.0",
+		"read-pkg-up": "^4.0.0"
+	},
+	"devDependencies": {
+		"@types/inquirer": "^0.0.43",
+		"@types/jest": "^23.3.3",
+		"@types/read-pkg-up": "^3.0.1",
+		"jest": "^23.6.0",
+		"rimraf": "^2.6.2",
+		"ts-jest": "^23.10.3",
+		"ts-node": "^7.0.0",
+		"typescript": "^2.9.2"
+	}
+}

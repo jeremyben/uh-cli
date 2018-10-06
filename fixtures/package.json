@@ -1,0 +1,14 @@
+{
+	"name": "run-uh-fixtures",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"start": "echo start",
+		"yo:lo": "echo yolo",
+		"yo:ho": "echo yoho",
+		"serve": "echo serve",
+		"serve:front": "echo serve front",
+		"serve:front:prod": "echo serve front prod",
+		"serve:back": "echo serve back"
+	}
+}
